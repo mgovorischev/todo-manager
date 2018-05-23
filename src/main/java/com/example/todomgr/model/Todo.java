@@ -2,18 +2,14 @@ package com.example.todomgr.model;
 
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.redis.core.RedisHash;
-import org.springframework.data.redis.core.index.Indexed;
 
 
-@RedisHash("todos")
 public class Todo {
     @Id
     private String id;
     private String title;
     private String description;
 
-    @Indexed
     private int priority;
 
     public String getId() {
