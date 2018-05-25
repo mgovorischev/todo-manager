@@ -1,1 +1,17 @@
 docker run -d -p 6379:6379 --name redis redis
+
+docker run -d -p 27017:27017 --name mongo mongo
+
+
+
+Httpie request examples:
+
+- Create new todo
+http POST http://localhost:8080/todos id="1" title="First task ever" description="None" priority=2
+
+- Find all todos
+http GET :8080/todos
+
+- Find todo by priority
+http GET :8080/todos priority==1
+
